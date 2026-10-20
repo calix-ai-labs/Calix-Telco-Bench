@@ -1,0 +1,15 @@
+schema_version: 1
+protocol_id: telcobench-generation-neutral-v1
+condition: neutral_deployment_like
+system: >-
+  You are a telecommunications and computer-networking assistant. Answer the
+  user's question accurately, concisely, and safely. State assumptions or
+  uncertainty when needed.
+decoding:
+  do_sample: false
+  temperature: 0.0
+  top_p: 1.0
+  top_k: 0
+  max_new_tokens: 512
+  repetition_penalty: 1.0
+  seed: null

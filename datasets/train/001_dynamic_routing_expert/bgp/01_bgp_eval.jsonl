@@ -1,0 +1,190 @@
+{"category": "fundamentals", "domain": "bgp", "id": "BGP-EVAL-0001", "question": "What problem does BGP solve in an IP network?"}
+{"category": "fundamentals", "domain": "bgp", "id": "BGP-EVAL-0002", "question": "What is the role of TCP port 179 in BGP?"}
+{"category": "finite_state_machine", "domain": "bgp", "id": "BGP-EVAL-0003", "question": "Name the classic BGP FSM states."}
+{"category": "finite_state_machine", "domain": "bgp", "id": "BGP-EVAL-0004", "question": "What does the Established state mean?"}
+{"category": "messages_and_wire", "domain": "bgp", "id": "BGP-EVAL-0005", "question": "What are the four base BGP-4 message types?"}
+{"category": "messages_and_wire", "domain": "bgp", "id": "BGP-EVAL-0006", "question": "What is the purpose of a BGP KEEPALIVE message?"}
+{"category": "messages_and_wire", "domain": "bgp", "id": "BGP-EVAL-0007", "question": "What does a BGP NOTIFICATION accomplish?"}
+{"category": "nlri_and_address_families", "domain": "bgp", "id": "BGP-EVAL-0008", "question": "What does NLRI represent in BGP?"}
+{"category": "path_attributes", "domain": "bgp", "id": "BGP-EVAL-0009", "question": "What is the purpose of AS_PATH?"}
+{"category": "path_attributes", "domain": "bgp", "id": "BGP-EVAL-0010", "question": "What is LOCAL_PREF used for?"}
+{"category": "path_attributes", "domain": "bgp", "id": "BGP-EVAL-0011", "question": "What is MED intended to influence?"}
+{"category": "path_attributes", "domain": "bgp", "id": "BGP-EVAL-0012", "question": "What is the NEXT_HOP attribute used for?"}
+{"category": "path_attributes", "domain": "bgp", "id": "BGP-EVAL-0013", "question": "What is the ORIGIN attribute and how can it affect path selection?"}
+{"category": "decision_process_and_multipath", "domain": "bgp", "id": "BGP-EVAL-0014", "question": "What is the purpose of the BGP decision process?"}
+{"category": "policy_and_route_control", "domain": "bgp", "id": "BGP-EVAL-0015", "question": "What is the fundamental role of routing policy in BGP?"}
+{"category": "ibgp", "domain": "bgp", "id": "BGP-EVAL-0016", "question": "What is the classic iBGP split-horizon rule?"}
+{"category": "ibgp", "domain": "bgp", "id": "BGP-EVAL-0017", "question": "Can two iBGP peers be multiple IP hops apart?"}
+{"category": "route_reflection", "domain": "bgp", "id": "BGP-EVAL-0018", "question": "What problem does BGP route reflection solve?"}
+{"category": "route_reflection", "domain": "bgp", "id": "BGP-EVAL-0019", "question": "What is a route-reflector client?"}
+{"category": "confederations", "domain": "bgp", "id": "BGP-EVAL-0020", "question": "What problem do BGP confederations solve?"}
+{"category": "fundamentals", "domain": "bgp", "id": "BGP-EVAL-0021", "question": "What is the difference between BGP reachability and actual packet forwarding?"}
+{"category": "fundamentals", "domain": "bgp", "id": "BGP-EVAL-0022", "question": "Distinguish a BGP speaker from a BGP peer."}
+{"category": "entities_and_roles", "domain": "bgp", "id": "BGP-EVAL-0023", "question": "Which subsystem normally owns BGP session state and which subsystem owns forwarding installation?"}
+{"category": "entities_and_roles", "domain": "bgp", "id": "BGP-EVAL-0024", "question": "What is the responsibility boundary between BGP and TCP?"}
+{"category": "entities_and_roles", "domain": "bgp", "id": "BGP-EVAL-0025", "question": "What is the responsibility boundary between BGP and an IGP?"}
+{"category": "transport_and_sessions", "domain": "bgp", "id": "BGP-EVAL-0026", "question": "How does eBGP multihop differ from directly connected eBGP at the transport level?"}
+{"category": "routing_information_bases_and_route_lifecycle", "domain": "bgp", "id": "BGP-EVAL-0027", "question": "How does route refresh differ from soft reconfiguration inbound?"}
+{"category": "path_attributes", "domain": "bgp", "id": "BGP-EVAL-0028", "question": "How do well-known mandatory, well-known discretionary, optional transitive, and optional non-transitive attributes differ?"}
+{"category": "path_attributes", "domain": "bgp", "id": "BGP-EVAL-0029", "question": "What problem do Large Communities address compared with standard communities?"}
+{"category": "update_processing", "domain": "bgp", "id": "BGP-EVAL-0030", "question": "Why should import policy be conceptually separated from best-path selection?"}
+{"category": "decision_process_and_multipath", "domain": "bgp", "id": "BGP-EVAL-0031", "question": "Why is the BGP best path not necessarily the route that reaches the FIB?"}
+{"category": "decision_process_and_multipath", "domain": "bgp", "id": "BGP-EVAL-0032", "question": "What is the difference between best-path selection and multipath installation?"}
+{"category": "policy_and_route_control", "domain": "bgp", "id": "BGP-EVAL-0033", "question": "What is the difference between import and export policy?"}
+{"category": "policy_and_route_control", "domain": "bgp", "id": "BGP-EVAL-0034", "question": "What is the difference between filtering a route and de-preferencing it?"}
+{"category": "ebgp", "domain": "bgp", "id": "BGP-EVAL-0035", "question": "What fundamentally distinguishes eBGP from iBGP?"}
+{"category": "route_reflection", "domain": "bgp", "id": "BGP-EVAL-0036", "question": "What is the difference between a client and non-client peer from the reflector's perspective?"}
+{"category": "confederations", "domain": "bgp", "id": "BGP-EVAL-0037", "question": "How do confederation member-AS boundaries differ from ordinary external AS boundaries?"}
+{"category": "confederations", "domain": "bgp", "id": "BGP-EVAL-0038", "question": "What is one operational tradeoff of confederations compared with route reflection?"}
+{"category": "resilience_and_restart", "domain": "bgp", "id": "BGP-EVAL-0039", "question": "How does Graceful Restart differ from ordinary session restart behavior?"}
+{"category": "nlri_and_address_families", "domain": "bgp", "id": "BGP-EVAL-0040", "question": "Why should the semantics of EVPN or VPN NLRI not be reduced to ordinary IPv4 prefix semantics?"}
+{"category": "ibgp", "domain": "bgp", "id": "BGP-EVAL-0041", "question": "Why should iBGP design not be treated as merely 'eBGP inside the AS'?"}
+{"category": "security_and_validation", "domain": "bgp", "id": "BGP-EVAL-0042", "question": "Why does an RPKI 'Invalid' state not itself force BGP to drop a route?"}
+{"category": "implementation_and_interoperability", "domain": "bgp", "id": "BGP-EVAL-0043", "question": "Why is relying on CLI command names dangerous in a vendor-neutral dataset?"}
+{"category": "fundamentals", "domain": "bgp", "id": "BGP-EVAL-0044", "question": "Why is BGP described as a path-vector protocol rather than a distance-vector protocol?"}
+{"category": "fundamentals", "domain": "bgp", "id": "BGP-EVAL-0045", "question": "Why does BGP not periodically resend the entire routing table during normal steady-state operation?"}
+{"category": "messages_and_wire", "domain": "bgp", "id": "BGP-EVAL-0046", "question": "What information is carried in a BGP OPEN message?"}
+{"category": "messages_and_wire", "domain": "bgp", "id": "BGP-EVAL-0047", "question": "What are the two major functions of an UPDATE message?"}
+{"category": "messages_and_wire", "domain": "bgp", "id": "BGP-EVAL-0048", "question": "What is the purpose of the BGP message marker and length fields?"}
+{"category": "messages_and_wire", "domain": "bgp", "id": "BGP-EVAL-0049", "question": "Why can malformed path attributes cause different behavior depending on the error-handling rules in use?"}
+{"category": "nlri_and_address_families", "domain": "bgp", "id": "BGP-EVAL-0050", "question": "What is the purpose of AFI and SAFI in MP-BGP?"}
+{"category": "nlri_and_address_families", "domain": "bgp", "id": "BGP-EVAL-0051", "question": "Why can IPv4 unicast and VPNv4 routes coexist over one BGP session?"}
+{"category": "nlri_and_address_families", "domain": "bgp", "id": "BGP-EVAL-0052", "question": "How does Add-Path change route identity?"}
+{"category": "path_attributes", "domain": "bgp", "id": "BGP-EVAL-0053", "question": "Why can an unknown optional transitive attribute still appear downstream?"}
+{"category": "path_attributes", "domain": "bgp", "id": "BGP-EVAL-0054", "question": "What are communities used for?"}
+{"category": "multiprotocol_bgp", "domain": "bgp", "id": "BGP-EVAL-0055", "question": "What does MP-BGP add to base BGP?"}
+{"category": "multiprotocol_bgp", "domain": "bgp", "id": "BGP-EVAL-0056", "question": "What is MP_REACH_NLRI used for?"}
+{"category": "multiprotocol_bgp", "domain": "bgp", "id": "BGP-EVAL-0057", "question": "What is MP_UNREACH_NLRI used for?"}
+{"category": "multiprotocol_bgp", "domain": "bgp", "id": "BGP-EVAL-0058", "question": "Why can one BGP TCP session support IPv4, IPv6, VPN, and EVPN families simultaneously?"}
+{"category": "multiprotocol_bgp", "domain": "bgp", "id": "BGP-EVAL-0059", "question": "Why is next-hop encoding an important MP-BGP interoperability issue?"}
+{"category": "capabilities_and_extensions", "domain": "bgp", "id": "BGP-EVAL-0060", "question": "Why does BGP use capabilities in the OPEN message?"}
+{"category": "transport_and_sessions", "domain": "bgp", "id": "BGP-EVAL-0061", "question": "What are the main prerequisites for a BGP session to establish?"}
+{"category": "transport_and_sessions", "domain": "bgp", "id": "BGP-EVAL-0062", "question": "What is a BGP simultaneous open?"}
+{"category": "transport_and_sessions", "domain": "bgp", "id": "BGP-EVAL-0063", "question": "Why can a correct neighbor IP still fail to form a session when an update-source or loopback is used?"}
+{"category": "transport_and_sessions", "domain": "bgp", "id": "BGP-EVAL-0064", "question": "What does BGP capability negotiation accomplish during session establishment?"}
+{"category": "transport_and_sessions", "domain": "bgp", "id": "BGP-EVAL-0065", "question": "Why can a firewall allow ICMP between peers but BGP still fail to establish?"}
+{"category": "finite_state_machine", "domain": "bgp", "id": "BGP-EVAL-0066", "question": "A peer repeatedly alternates between Connect and Active. What should you investigate first?"}
+{"category": "finite_state_machine", "domain": "bgp", "id": "BGP-EVAL-0067", "question": "A session reaches OpenSent but never Established. What class of problems does that suggest?"}
+{"category": "finite_state_machine", "domain": "bgp", "id": "BGP-EVAL-0068", "question": "What is the operational significance of a NOTIFICATION during session establishment?"}
+{"category": "finite_state_machine", "domain": "bgp", "id": "BGP-EVAL-0069", "question": "Why is FSM state history more useful than only seeing the current state?"}
+{"category": "routing_information_bases_and_route_lifecycle", "domain": "bgp", "id": "BGP-EVAL-0070", "question": "What is the conceptual role of Adj-RIB-In?"}
+{"category": "routing_information_bases_and_route_lifecycle", "domain": "bgp", "id": "BGP-EVAL-0071", "question": "What is the conceptual role of Loc-RIB?"}
+{"category": "routing_information_bases_and_route_lifecycle", "domain": "bgp", "id": "BGP-EVAL-0072", "question": "What is the conceptual role of Adj-RIB-Out?"}
+{"category": "routing_information_bases_and_route_lifecycle", "domain": "bgp", "id": "BGP-EVAL-0073", "question": "Why can 'received routes' and 'accepted routes' show different counts?"}
+{"category": "routing_information_bases_and_route_lifecycle", "domain": "bgp", "id": "BGP-EVAL-0074", "question": "What happens conceptually when a previously advertised route is withdrawn?"}
+{"category": "routing_information_bases_and_route_lifecycle", "domain": "bgp", "id": "BGP-EVAL-0075", "question": "Why is route state ownership important during troubleshooting?"}
+{"category": "entities_and_roles", "domain": "bgp", "id": "BGP-EVAL-0076", "question": "What are Adj-RIB-In, Loc-RIB, and Adj-RIB-Out conceptually used for?"}
+{"category": "entities_and_roles", "domain": "bgp", "id": "BGP-EVAL-0077", "question": "Trace the high-level information flow from a BGP peer to the forwarding plane."}
+{"category": "routing_system_and_forwarding_integration", "domain": "bgp", "id": "BGP-EVAL-0078", "question": "What is the difference between BGP Loc-RIB, the system RIB, and the FIB?"}
+{"category": "routing_system_and_forwarding_integration", "domain": "bgp", "id": "BGP-EVAL-0079", "question": "What is recursive next-hop resolution?"}
+{"category": "routing_system_and_forwarding_integration", "domain": "bgp", "id": "BGP-EVAL-0080", "question": "What does 'RIB failure' generally mean for a BGP route?"}
+{"category": "routing_system_and_forwarding_integration", "domain": "bgp", "id": "BGP-EVAL-0081", "question": "Why can administrative distance or protocol preference affect a BGP route after BGP best-path selection?"}
+{"category": "routing_system_and_forwarding_integration", "domain": "bgp", "id": "BGP-EVAL-0082", "question": "How can an IGP outage remove forwarding for a BGP prefix without withdrawing the BGP advertisement itself?"}
+{"category": "routing_system_and_forwarding_integration", "domain": "bgp", "id": "BGP-EVAL-0083", "question": "Why might multiple BGP multipaths be selected but fewer paths appear in the FIB?"}
+{"category": "deployment_and_design", "domain": "bgp", "id": "BGP-EVAL-0084", "question": "Why are redundant BGP sessions not sufficient by themselves for resilient routing?"}
+{"category": "deployment_and_design", "domain": "bgp", "id": "BGP-EVAL-0085", "question": "What is the design tradeoff between full-mesh iBGP and route reflection?"}
+{"category": "adjacent_technology_boundaries", "domain": "bgp", "id": "BGP-EVAL-0086", "question": "What role does an IGP commonly play for BGP?"}
+{"category": "adjacent_technology_boundaries", "domain": "bgp", "id": "BGP-EVAL-0087", "question": "How does BFD relate to BGP?"}
+{"category": "adjacent_technology_boundaries", "domain": "bgp", "id": "BGP-EVAL-0088", "question": "What is the boundary between BGP and RPKI?"}
+{"category": "adjacent_technology_boundaries", "domain": "bgp", "id": "BGP-EVAL-0089", "question": "What part of EVPN is BGP responsible for?"}
+{"category": "adjacent_technology_boundaries", "domain": "bgp", "id": "BGP-EVAL-0090", "question": "What part of MPLS L3VPN is BGP responsible for?"}
+{"category": "fundamentals", "domain": "bgp", "id": "BGP-EVAL-0091", "question": "What is the difference between a route being received, accepted, selected, installed, and advertised?"}
+{"category": "entities_and_roles", "domain": "bgp", "id": "BGP-EVAL-0092", "question": "Why can a BGP route be selected but still not be present in the forwarding table?"}
+{"category": "nlri_and_address_families", "domain": "bgp", "id": "BGP-EVAL-0093", "question": "What is the operational consequence if one peer does not activate an address family?"}
+{"category": "scale_and_performance", "domain": "bgp", "id": "BGP-EVAL-0094", "question": "Why can a route reflector improve session scale but still become a bottleneck?"}
+{"category": "routing_system_and_forwarding_integration", "domain": "bgp", "id": "BGP-EVAL-0095", "question": "What evidence proves that a BGP-selected route actually reached hardware forwarding?"}
+{"category": "standards_and_evolution", "domain": "bgp", "id": "BGP-EVAL-0096", "question": "Why should an evaluator distinguish an RFC that updates RFC 4271 from an unrelated BGP application RFC?"}
+{"category": "adjacent_technology_boundaries", "domain": "bgp", "id": "BGP-EVAL-0097", "question": "What is the boundary between BGP FlowSpec and enforcement?"}
+{"category": "adjacent_technology_boundaries", "domain": "bgp", "id": "BGP-EVAL-0098", "question": "What is the boundary between BGP-LS and an external controller?"}
+{"category": "adjacent_technology_boundaries", "domain": "bgp", "id": "BGP-EVAL-0099", "question": "What is the boundary between BGP and the ASIC forwarding plane?"}
+{"category": "update_processing", "domain": "bgp", "id": "BGP-EVAL-0100", "question": "What major stages can an inbound BGP UPDATE pass through before a route is selected?"}
+{"category": "update_processing", "domain": "bgp", "id": "BGP-EVAL-0101", "question": "What happens when an UPDATE withdraws the currently selected path and an alternative path exists?"}
+{"category": "update_processing", "domain": "bgp", "id": "BGP-EVAL-0102", "question": "Why can two peers advertise the same prefix but only one path be sent onward?"}
+{"category": "update_processing", "domain": "bgp", "id": "BGP-EVAL-0103", "question": "How can inbound policy change route attributes without rejecting the route?"}
+{"category": "update_processing", "domain": "bgp", "id": "BGP-EVAL-0104", "question": "Why is attribute validation performed before trusting a received route?"}
+{"category": "decision_process_and_multipath", "domain": "bgp", "id": "BGP-EVAL-0105", "question": "What conditions generally have to be satisfied for BGP multipath/ECMP?"}
+{"category": "decision_process_and_multipath", "domain": "bgp", "id": "BGP-EVAL-0106", "question": "What does multipath-relax change conceptually?"}
+{"category": "decision_process_and_multipath", "domain": "bgp", "id": "BGP-EVAL-0107", "question": "Why can IGP metric to the BGP next hop matter late in path selection?"}
+{"category": "decision_process_and_multipath", "domain": "bgp", "id": "BGP-EVAL-0108", "question": "A path has higher LOCAL_PREF but its next hop is unresolved. Can it be a usable forwarding path?"}
+{"category": "decision_process_and_multipath", "domain": "bgp", "id": "BGP-EVAL-0109", "question": "Why should deterministic MED behavior be considered when many paths from the same neighboring AS are present?"}
+{"category": "ebgp", "domain": "bgp", "id": "BGP-EVAL-0110", "question": "What can happen if the local and remote AS expectations do not match?"}
+{"category": "ibgp", "domain": "bgp", "id": "BGP-EVAL-0111", "question": "A route is present on an edge router but absent on another iBGP router. What propagation rule should you check?"}
+{"category": "multiprotocol_bgp", "domain": "bgp", "id": "BGP-EVAL-0112", "question": "What happens if peers negotiate the BGP session but not a desired AFI/SAFI?"}
+{"category": "security_and_validation", "domain": "bgp", "id": "BGP-EVAL-0113", "question": "Why should control-plane policing be considered when diagnosing BGP security incidents?"}
+{"category": "operations_and_observability", "domain": "bgp", "id": "BGP-EVAL-0114", "question": "What are the first operational views you would check for a BGP incident?"}
+{"category": "operations_and_observability", "domain": "bgp", "id": "BGP-EVAL-0115", "question": "Why is a packet capture sometimes necessary even when show commands look normal?"}
+{"category": "troubleshooting_and_failure_modes", "domain": "bgp", "id": "BGP-EVAL-0116", "question": "A BGP session is Idle. What broad categories should you investigate?"}
+{"category": "troubleshooting_and_failure_modes", "domain": "bgp", "id": "BGP-EVAL-0117", "question": "A session is Established but zero prefixes are received. What should you check?"}
+{"category": "troubleshooting_and_failure_modes", "domain": "bgp", "id": "BGP-EVAL-0118", "question": "A prefix is received but never selected. What evidence should you gather?"}
+{"category": "troubleshooting_and_failure_modes", "domain": "bgp", "id": "BGP-EVAL-0119", "question": "A route is best in BGP but traffic is blackholed. What layer should you inspect next?"}
+{"category": "troubleshooting_and_failure_modes", "domain": "bgp", "id": "BGP-EVAL-0120", "question": "A session resets only when large route updates arrive. What possible classes of issues should you consider?"}
+{"category": "troubleshooting_and_failure_modes", "domain": "bgp", "id": "BGP-EVAL-0121", "question": "Why is comparing one good prefix with one bad prefix a useful TAC technique?"}
+{"category": "troubleshooting_and_failure_modes", "domain": "bgp", "id": "BGP-EVAL-0122", "question": "A BGP peer is reachable with ping but TCP 179 times out. What does that narrow down?"}
+{"category": "implementation_and_interoperability", "domain": "bgp", "id": "BGP-EVAL-0123", "question": "What should be checked when a capability works between same-vendor peers but not across vendors?"}
+{"category": "policy_and_route_control", "domain": "bgp", "id": "BGP-EVAL-0124", "question": "Why is default-deny eBGP policy considered a safer operational posture?"}
+{"category": "policy_and_route_control", "domain": "bgp", "id": "BGP-EVAL-0125", "question": "Why should route policy be evaluated separately per address family?"}
+{"category": "route_reflection", "domain": "bgp", "id": "BGP-EVAL-0126", "question": "Why can route reflection change path visibility compared with a full mesh?"}
+{"category": "route_reflection", "domain": "bgp", "id": "BGP-EVAL-0127", "question": "What is path hiding in a route-reflector design?"}
+{"category": "route_reflection", "domain": "bgp", "id": "BGP-EVAL-0128", "question": "Why can route-reflector placement affect traffic engineering?"}
+{"category": "confederations", "domain": "bgp", "id": "BGP-EVAL-0129", "question": "Why are confederation path segments needed?"}
+{"category": "confederations", "domain": "bgp", "id": "BGP-EVAL-0130", "question": "Why must confederation policy be designed carefully at member-AS boundaries?"}
+{"category": "policy_and_route_control", "domain": "bgp", "id": "BGP-EVAL-0131", "question": "How can communities simplify BGP policy?"}
+{"category": "policy_and_route_control", "domain": "bgp", "id": "BGP-EVAL-0132", "question": "What risk does an overly broad prefix match in export policy create?"}
+{"category": "policy_and_route_control", "domain": "bgp", "id": "BGP-EVAL-0133", "question": "Why should policy changes often use route refresh or soft reprocessing instead of resetting sessions?"}
+{"category": "ebgp", "domain": "bgp", "id": "BGP-EVAL-0134", "question": "How does AS_PATH help prevent inter-AS routing loops?"}
+{"category": "ebgp", "domain": "bgp", "id": "BGP-EVAL-0135", "question": "Why is eBGP commonly deployed at administrative boundaries?"}
+{"category": "ebgp", "domain": "bgp", "id": "BGP-EVAL-0136", "question": "What additional consideration appears when eBGP peers are not directly connected?"}
+{"category": "ebgp", "domain": "bgp", "id": "BGP-EVAL-0137", "question": "Why is explicit export policy particularly important on eBGP edges?"}
+{"category": "ibgp", "domain": "bgp", "id": "BGP-EVAL-0138", "question": "Why does a large iBGP deployment traditionally require full mesh or a scaling mechanism?"}
+{"category": "ibgp", "domain": "bgp", "id": "BGP-EVAL-0139", "question": "Why is next-hop reachability especially important in iBGP?"}
+{"category": "route_reflection", "domain": "bgp", "id": "BGP-EVAL-0140", "question": "What are ORIGINATOR_ID and CLUSTER_LIST used for?"}
+{"category": "capabilities_and_extensions", "domain": "bgp", "id": "BGP-EVAL-0141", "question": "What does the Extended Message capability change?"}
+{"category": "capabilities_and_extensions", "domain": "bgp", "id": "BGP-EVAL-0142", "question": "Why must a capability be negotiated rather than simply used unilaterally?"}
+{"category": "capabilities_and_extensions", "domain": "bgp", "id": "BGP-EVAL-0143", "question": "What is the operational value of Enhanced Route Refresh?"}
+{"category": "resilience_and_restart", "domain": "bgp", "id": "BGP-EVAL-0144", "question": "What is the main risk of retaining stale routes during Graceful Restart?"}
+{"category": "resilience_and_restart", "domain": "bgp", "id": "BGP-EVAL-0145", "question": "What is Long-Lived Graceful Restart conceptually used for?"}
+{"category": "resilience_and_restart", "domain": "bgp", "id": "BGP-EVAL-0146", "question": "Why is forwarding-state preservation a critical assumption in graceful-restart designs?"}
+{"category": "resilience_and_restart", "domain": "bgp", "id": "BGP-EVAL-0147", "question": "What should an operator verify before relying on Graceful Restart during maintenance?"}
+{"category": "timers", "domain": "bgp", "id": "BGP-EVAL-0148", "question": "How is the negotiated Hold Time determined?"}
+{"category": "timers", "domain": "bgp", "id": "BGP-EVAL-0149", "question": "What is the relationship between Keepalive interval and Hold Time?"}
+{"category": "timers", "domain": "bgp", "id": "BGP-EVAL-0150", "question": "Why can aggressively low BGP timers be risky?"}
+{"category": "timers", "domain": "bgp", "id": "BGP-EVAL-0151", "question": "What problem does a Send Hold Timer address?"}
+{"category": "security_and_validation", "domain": "bgp", "id": "BGP-EVAL-0152", "question": "What threats can TCP MD5 or TCP-AO-style protection help address for BGP sessions?"}
+{"category": "security_and_validation", "domain": "bgp", "id": "BGP-EVAL-0153", "question": "How do prefix filters and AS-path filters complement each other?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0154", "question": "A BGP session is Established, but the local router shows zero received prefixes. What is proven, what remains unknown, and what is the minimum next evidence to distinguish a peer-export problem from a local import or AFI/SAFI problem?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0155", "question": "A prefix is visible as received from a peer but is not the selected BGP path. What can you conclude, what can you not conclude, and what evidence should you collect next?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0156", "question": "BGP marks a route best, but traffic to the prefix fails. What is proven, what remains unproven, and what is the minimum next evidence?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0157", "question": "A peer remains in OpenSent even though TCP is established. What does this prove, what does it not prove, and what should be captured next?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0158", "question": "A route is marked RPKI Invalid but still appears in BGP. What can and cannot be concluded?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0159", "question": "Routes are retained as stale after a BGP reset. Is that enough to claim uninterrupted forwarding? What evidence is needed next?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0160", "question": "An RR has a best path but a client does not receive it. What is proven, what is unknown, and what should be checked next?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0161", "question": "Ping works, but TCP/179 never completes. What does the evidence localize, and what is the next minimum check?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0162", "question": "A route disappears after an inbound policy change and Route Refresh, without a session reset. What is the strongest supported conclusion?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0163", "question": "BGP reports two multipaths but only one next hop is installed. What is proven and what should be checked next?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0164", "question": "Can a stable table size rule out BGP churn as the cause of CPU load? What should you inspect next?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0165", "question": "What is the strongest inference from this timing pattern, and what evidence would distinguish packet loss from peer-side scheduler or CPU starvation?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0166", "question": "Does seeing the Add-Path capability prove that multiple paths should be received for this prefix?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0167", "question": "What conclusion is justified, and what would you verify before calling this normal loop prevention?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0168", "question": "What does this evidence prove about the IPv6 failure?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0169", "question": "Which transition should be inspected next?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0170", "question": "What is the first unproven transition?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0171", "question": "Where should fault localization move next?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0172", "question": "After successful UPDATE reception and parsing, what is the next transition to inspect?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0173", "question": "With post-policy acceptance proven but no selection, which transition should be inspected next?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0174", "question": "What is the first downstream transition to inspect?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0175", "question": "Where is the next likely fault domain?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0176", "question": "What transition should be checked next?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0177", "question": "With RR selection and the client session proven good, what should be inspected next?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0178", "question": "What is the first failed assumption to inspect?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0179", "question": "After RPKI classification is known, what is the next transition to inspect?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0180", "question": "Using the evidence, identify the last known-good point, first unproven transition, likely fault domain, a competing hypothesis, and the next discriminating evidence."}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0181", "question": "Diagnose the failure path and identify the most likely fault domain."}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0182", "question": "What is the likely mechanism, what is not broken, and what evidence would confirm the diagnosis?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0183", "question": "Identify the last known-good point and the causal fault domain."}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0184", "question": "Why does the receiver see only one path, and what evidence is decisive?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0185", "question": "Localize the fault and explain which evidence is non-causal."}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0186", "question": "Why did graceful restart not preserve service end to end?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0187", "question": "What is the leading explanation and what evidence would distinguish it from a FIB limit?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0188", "question": "Identify the causal transition and rule out the misleading hypothesis that the peer withdrew the route."}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0189", "question": "What is the strongest diagnosis, last known-good layer, and next confirmation step?"}
+{"category": "operations", "domain": "bgp", "id": "BGP-EVAL-0190", "question": "Where is the first failed transition and what evidence is irrelevant to that transition?"}

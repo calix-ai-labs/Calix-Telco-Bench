@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.telcobench-digest-cache.json
+outputs/
+*.log
+.DS_Store
+.pytest_cache/
+build/
+dist/
+*.egg-info/
+config/local/
+
+# Python bytecode
+__pycache__/
+*.py[cod]

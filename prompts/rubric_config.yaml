@@ -1,0 +1,110 @@
+# Per-route rubric CONTEXT for the judging stage.
+#
+# This file stores only the scope of each route. The static rubric anchors (the
+# five 5/3/1/0 dimensions, the completeness and usefulness guidance, and the
+# rule that `hallucinations` only penalizes factually-false claims) live in code
+# and are shared by every route.
+#
+# Per route, `factual` and `terminology` describe the full SCOPE of the route —
+# not a sample list and not a single reference. No single standard completely
+# defines a protocol, so each entry names the *range* of correct behavior and
+# terminology rather than one document. Scope statements are stable and let the
+# judge judge any correct answer within the route.
+#
+# default_route is used only when a route has no entry here (and judging is
+# refused anyway — see `missing_rubric`). To add or change a route, add one short
+# scope entry.
+
+default_route: ospf
+
+rubrics:
+  bgp:
+    factual: >-
+      All Border Gateway Protocol facts and behavior across all variants and
+      versions, including eBGP and iBGP, and every address family and optional
+      attribute.
+    terminology: >-
+      All BGP terminology and protocol entities across all variants.
+  ospf:
+    factual: >-
+      All Open Shortest Path First facts and behavior across all versions and
+      variants, including OSPFv2 and OSPFv3, and all link-state areas and LSA
+      types.
+    terminology: >-
+      All OSPF terminology and protocol entities across OSPFv2 and OSPFv3.
+  isis:
+    factual: >-
+      All IS-IS facts and behavior across all levels and address families.
+    terminology: >-
+      All IS-IS terminology and protocol entities.
+  l2_switching:
+    factual: >-
+      All Layer 2 switching facts and behavior, including VLANs, spanning-tree
+      variants, link aggregation, and standard bridging.
+    terminology: >-
+      All Layer 2 switching terminology.
+  ip_routing:
+    factual: >-
+      All general IP routing facts and behavior, including static routes,
+      longest-prefix matching, preference vs cost, the routing and forwarding
+      information bases, and next-hop resolution.
+    terminology: >-
+      All general IP-routing terminology.
+  multicast:
+    factual: >-
+      All multicast facts and behavior across all protocols and modes, including
+      PIM dense and sparse, IGMP, static and dynamic rendezvous points, and
+      any-source and single-source trees.
+    terminology: >-
+      All multicast terminology across all PIM modes and IGMP.
+  mpls_vpn:
+    factual: >-
+      All MPLS VPN facts and behavior across L3VPN and L2VPN variants, including
+      VRFs, route distinguishers, route targets, and label stacks.
+    terminology: >-
+      All MPLS VPN terminology.
+  pon_optical:
+    factual: >-
+      All PON and optical-access facts and behavior across GPON, EPON, WDM-PON,
+      and related FTTH technologies.
+    terminology: >-
+      All PON and optical-access terminology.
+  qos:
+    factual: >-
+      All Quality of Service facts and behavior across classification, marking,
+      queuing, shaping, and policing.
+    terminology: >-
+      All QoS terminology.
+  bng_subscriber_mgmt:
+    factual: >-
+      All BNG and subscriber-management facts and behavior across PPPoE and
+      IPoE, DHCP, virtual routing and forwarding, service and dynamic profiles,
+      ACLs, and per-subscriber policy.
+    terminology: >-
+      All BNG and subscriber-management terminology.
+  network_fundamentals:
+    factual: >-
+      All general networking fundamentals, including the reference networking
+      models, addressing, subnetting, encapsulation, and the core helper
+      protocols.
+    terminology: >-
+      All general networking terminology.
+  wifi_gateway:
+    factual: >-
+      All WiFi gateway and home-CPE facts and behavior, including Wi-Fi
+      generations, bands and channels, RF characteristics, NAT and port
+      forwarding, guest networks, and client DHCP/DNS.
+    terminology: >-
+      All WiFi gateway and CPE terminology.
+  linux_tool_calling:
+    factual: >-
+      All correct Linux command-line usage and behavior across standard CLI
+      tools.
+    terminology: >-
+      All standard Linux and CLI terminology.
+  linux_tool_agentic:
+    factual: >-
+      All correct Linux action planning and behavior across standard CLI tools,
+      including safe command sequencing and verification.
+    terminology: >-
+      All standard Linux and CLI terminology for action planning.

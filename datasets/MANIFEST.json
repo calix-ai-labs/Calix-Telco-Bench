@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "release_status": "PUBLIC_PREVIEW",
+  "release_version": "v0.1.0-preview",
+  "release_date": "2026-10-19",
+  "benchmark_type": "route-labelled question-only prompts",
+  "reference_answers": false,
+  "routes": [
+    {
+      "route": "bgp",
+      "path": "heldout/bgp.jsonl",
+      "records": 190,
+      "sha256": "a5bad7729aef6c7be8ece98aabab8ceaca8bd08ec31f03ab7a4750b8ebc3e1fa"
+    },
+    {
+      "route": "bng_subscriber_mgmt",
+      "path": "heldout/bng_subscriber_mgmt.jsonl",
+      "records": 380,
+      "sha256": "61f26aa2a737acb9d7b6c9b1bedbcd54e0e35ccd45b73e47cd246292e463e574"
+    },
+    {
+      "route": "ip_routing",
+      "path": "heldout/ip_routing.jsonl",
+      "records": 190,
+      "sha256": "294ee45144103c2eaa9ccabe5a38da098e29557b16679a19e6e8b6fb9e689901"
+    },
+    {
+      "route": "isis",
+      "path": "heldout/isis.jsonl",
+      "records": 190,
+      "sha256": "ab2481cc8d6113849dc08f48e47c442d60ef1068fef5f042aa286c2bb578f81d"
+    },
+    {
+      "route": "l2_switching",
+      "path": "heldout/l2_switching.jsonl",
+      "records": 190,
+      "sha256": "466a4d3f1ac2e74762ac9a05f5812390df87c55aeeac7861db7f288b71b33c8e"
+    },
+    {
+      "route": "linux_tool_agentic",
+      "path": "heldout/linux_tool_agentic.jsonl",
+      "records": 190,
+      "sha256": "e268b478b193d49e7a97ed45acc4c2da2f0b273eb5441f25f9a3078e8daa304f"
+    },
+    {
+      "route": "linux_tool_calling",
+      "path": "heldout/linux_tool_calling.jsonl",
+      "records": 190,
+      "sha256": "1841dcbe99a9781271781f3e00d95fd8fd3314d23c4689fd132b3a471a05be7b"
+    },
+    {
+      "route": "mpls_vpn",
+      "path": "heldout/mpls_vpn.jsonl",
+      "records": 190,
+      "sha256": "09ed05438aacf8a1f25c1269571649ee92c920eb3e727cb78817f6f80bc9fa7c"
+    },
+    {
+      "route": "multicast",
+      "path": "heldout/multicast.jsonl",
+      "records": 190,
+      "sha256": "29aa878d1084eccf300acd033fb73d648c5beabd7339d89cc724c3deb6d7f7ce"
+    },
+    {
+      "route": "network_fundamentals",
+      "path": "heldout/network_fundamentals.jsonl",
+      "records": 190,
+      "sha256": "c03ff9a34ddde682aa08512b38b7e77abe76b0435f1925cf03264c9b203b1ea5"
+    },
+    {
+      "route": "ospf",
+      "path": "heldout/ospf.jsonl",
+      "records": 190,
+      "sha256": "98b4a0c80c9380672b89453c18fd170de12f5a0229c02cdd5b57f18e0d0139ce"
+    },
+    {
+      "route": "pon_optical",
+      "path": "heldout/pon_optical.jsonl",
+      "records": 190,
+      "sha256": "8e30ddb068d380606511357582677a9bfcbf78c11aeda2e0d093d165cecd33cb"
+    },
+    {
+      "route": "qos",
+      "path": "heldout/qos.jsonl",
+      "records": 190,
+      "sha256": "22c1889afe9b9615d4375ce3262c2d2cc370caf642661995fc799c1fd33b653f"
+    },
+    {
+      "route": "wifi_gateway",
+      "path": "heldout/wifi_gateway.jsonl",
+      "records": 190,
+      "sha256": "229cc1da3317ef6366cb4133b2c35ec232115d24a3ba05c2d37bfaa501864b42"
+    }
+  ]
+}

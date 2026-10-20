@@ -1,0 +1,35 @@
+schema_version: 1
+protocol_id: calix-release-1.0-route-expert-v2-checkpoint-screen
+
+release:
+  root: ${NETWORK_LLM_EVAL_RELEASE_ROOT}
+  cpt_base:
+    path: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/model_gated_candidate/cpt-llama31-8b-six-expert-final-oct-1
+    model_safetensors_sha256: 1ed0a37794df019a3e5fad897bd6370dc5bec7b6ea1f8f3d0f80316aafeb2faa
+
+benchmark:
+  manifest: ../datasets/MANIFEST.json
+  prompts: ../prompts/generation-route-expert-v2.yaml
+  condition: route_conditioned_expert_diagnostic
+  output_root: /tmp/telcobench-checkpoint-screen-20261007
+  max_new_tokens: 16384
+  local_files_only: true
+  trust_remote_code: false
+
+scoring:
+  judge_protocol: prompts/JUDGE_PROTOCOL.md
+  rubric_config: prompts/rubric_config.yaml
+
+targets:
+  student_step_1000:
+    device: cuda:2
+    output: step-1000
+    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/restricted_reproduction/run_artifacts/shared-cpt-final-oct-1/checkpoints/recovery/step_1000
+    adapter_revision: b789f7db388ebbc320902a7ec2ab0e95aab6de3c9c209b21c86220ca05054805
+    routes: null
+  student_step_1250:
+    device: cuda:3
+    output: step-1250
+    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/restricted_reproduction/run_artifacts/shared-cpt-final-oct-1/checkpoints/recovery/step_1250
+    adapter_revision: 9cfa910d10b4c44cbedc720a6cc7d80fab33c4f9eb312e78283f62fc2ace63dc
+    routes: null

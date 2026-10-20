@@ -1,0 +1,26 @@
+schema_version: 1
+protocol_id: telcobench-generation-v1
+condition: route_conditioned_diagnostic
+decoding:
+  do_sample: false
+  temperature: 0.0
+  top_p: 1.0
+  top_k: 0
+  max_new_tokens: 512
+  repetition_penalty: 1.0
+  seed: null
+routes:
+  bgp: You are an expert in BGP. Answer accurately and concisely.
+  ospf: You are an expert in OSPF. Answer accurately and concisely.
+  isis: You are an expert in IS-IS. Answer accurately and concisely.
+  mpls_vpn: You are an expert in MPLS and L3VPN. Answer accurately and concisely.
+  bng_subscriber_mgmt: You are an expert in BNG and subscriber management. Answer accurately and concisely.
+  qos: You are an expert in QoS and traffic engineering. Answer accurately and concisely.
+  ip_routing: You are an expert in IP routing. Answer accurately and concisely.
+  multicast: You are an expert in IP multicast. Answer accurately and concisely.
+  linux_tool_calling: You are an expert in Linux networking tools and diagnosis. Answer accurately and concisely.
+  linux_tool_agentic: You are an expert in Linux networking tool use and diagnosis. Answer accurately and concisely.
+  network_fundamentals: You are an expert in networking fundamentals. Answer accurately and concisely.
+  l2_switching: You are an expert in Layer-2 Ethernet switching. Answer accurately and concisely.
+  pon_optical: You are an expert in PON and optical access. Answer accurately and concisely.
+  wifi_gateway: You are an expert in WiFi gateways and residential WiFi. Answer accurately and concisely.
