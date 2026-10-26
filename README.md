@@ -31,11 +31,20 @@ no reference answers or executable oracles, its scores are not ground-truth
 accuracy, pass-rate, or proof of operational correctness. Report the judge
 model, prompt version, and evaluation configuration alongside any results.
 
-## License and attribution
+## License and Attribution
 
-Calix-TelcoBench is licensed under the [Apache License 2.0](LICENSE). Redistributions
-and derivative works must retain the included [NOTICE](NOTICE), which credits
-Calix, Inc. as the developer of Calix-TelcoBench.
+Calix-TelcoBench is developed and maintained by **Calix, Inc.** and is licensed under the [GNU Affero General Public License v3.0 (AGPL-3.0)](https://www.gnu.org/licenses/agpl-3.0.html).
+
+Copyright © 2026 Calix, Inc.
+
+This license permits use, modification, and redistribution of the software under the terms of AGPL-3.0, including applicable source-code disclosure requirements for modified versions distributed or made available for interaction over a network.
+
+See the [LICENSE](LICENSE) file for the complete license terms.
+
+### Attribution
+
+Calix-TelcoBench was developed by **Calix, Inc.** as part of its telecommunications AI research and evaluation initiatives.
+Redistributions and modifications must preserve applicable copyright and license notices in accordance with AGPL-3.0.
 
 ## Distribution
 
