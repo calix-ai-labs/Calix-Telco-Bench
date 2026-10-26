@@ -1,9 +1,9 @@
-# TelcoBench
+# Calix-TelcoBench
 
-**TelcoBench — A benchmark for evaluating language models on telecommunications
+**Calix-TelcoBench — A benchmark for evaluating language models on telecommunications
 and network-infrastructure tasks.**
 
-TelcoBench is a reproducible benchmark harness for telecommunications and
+Calix-TelcoBench is a reproducible benchmark harness for telecommunications and
 network-infrastructure language models. It is a portable extraction of the
 MOPD (Multi-expert On-Policy Distillation) evaluation contract:
 it loads a frozen base model and optional LoRA adapter, generates one answer per
@@ -25,7 +25,7 @@ proof of operational correctness. See [DATA_CARD.md](DATA_CARD.md).
 
 ## Metric limitations
 
-TelcoBench currently measures complete generation coverage and rubric-based
+Calix-TelcoBench currently measures complete generation coverage and rubric-based
 quality scores. Because the released data contains prompts and route labels but
 no reference answers or executable oracles, its scores are not ground-truth
 accuracy, pass-rate, or proof of operational correctness. Report the judge
@@ -33,9 +33,9 @@ model, prompt version, and evaluation configuration alongside any results.
 
 ## License and attribution
 
-TelcoBench is licensed under the [Apache License 2.0](LICENSE). Redistributions
+Calix-TelcoBench is licensed under the [Apache License 2.0](LICENSE). Redistributions
 and derivative works must retain the included [NOTICE](NOTICE), which credits
-Calix, Inc. as the developer of TelcoBench.
+Calix, Inc. as the developer of Calix-TelcoBench.
 
 ## Distribution
 
@@ -56,8 +56,8 @@ Validation and aggregation require only PyYAML. Generation additionally needs
 CUDA-compatible PyTorch, Transformers, and PEFT.
 
 ```bash
-git clone <YOUR_GITHUB_URL> telcobench
-cd telcobench
+git clone <YOUR_GITHUB_URL> Calix-TelcoBench
+cd Calix-TelcoBench
 ./setup.sh
 ```
 
@@ -87,7 +87,7 @@ Run all commands from the cloned repository using its package-local virtual
 environment:
 
 ```bash
-cd ~/telcobench
+cd ~/Calix-TelcoBench
 ```
 
 | Goal | Command |
@@ -152,7 +152,7 @@ before starting. This prevents prior partial generations or judgments from
 appearing as current progress in the TUI. It does not remove unrelated
 root-level validation evidence such as `adapter-effect-check.json`.
 
-## TelcoBench generation (MOPD-compatible)
+## Calix-TelcoBench generation (MOPD-compatible)
 
 The generator follows the MOPD evaluator’s essential behavior:
 
@@ -195,7 +195,7 @@ older `prompts/generation-v1.yaml` is a route-conditioned diagnostic. It names
 the evaluated expertise (for example, BGP) and must never be presented as a
 deployment result. If reported, run both conditions for every comparison model.
 
-## TelcoBench configuration and terminal monitor
+## Calix-TelcoBench configuration and terminal monitor
 
 `config/default.yaml` is a versioned execution contract for an approved local artifact
 bundle. It pins the expected CPT/base and LoRA SHA-256 identities, neutral
@@ -243,7 +243,7 @@ To resume an interrupted target with the identical frozen contract, use
 Start the primary CPT-base versus final-MOPD-student comparison:
 
 ```bash
-cd ~/telcobench
+cd ~/Calix-TelcoBench
 
 .venv/bin/telcobench start --config config/default.yaml --target cpt_base
 .venv/bin/telcobench start --config config/default.yaml --target mopd_student_step_2000
