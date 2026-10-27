@@ -86,7 +86,7 @@ def _judge_is_complete(plan: dict[str, Any], route: str | None = None) -> tuple[
 
 
 def _start_target_judge(config_path: Path, target: str, output: Path, resume: bool, route: str | None = None) -> subprocess.Popen[str]:
-    command = [sys.executable, "-m", "network_llm_eval.cli", "judge", "--config", str(config_path), "--target", target]
+    command = [sys.executable, "-m", "calix_telco_bench.cli", "judge", "--config", str(config_path), "--target", target]
     if route:
         # Route coverage has already been verified by generation-progress.json.
         # The target as a whole is intentionally still incomplete.

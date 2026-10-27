@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "release_status": "PUBLIC_PREVIEW",
-  "release_version": "v0.1.0-preview",
+  "release_status": "PUBLIC_RELEASE",
+  "release_version": "v0.1.0",
   "release_date": "2026-10-19",
   "benchmark_type": "route-labelled question-only prompts",
   "reference_answers": false,

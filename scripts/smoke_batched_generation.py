@@ -9,9 +9,9 @@ from pathlib import Path
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-from network_llm_eval.contracts import load_manifest
-from network_llm_eval.dataset import iter_records
-from network_llm_eval.generation import load_prompt_protocol, system_prompt
+from calix_telco_bench.contracts import load_manifest
+from calix_telco_bench.dataset import iter_records
+from calix_telco_bench.generation import load_prompt_protocol, system_prompt
 
 
 def main() -> None:
@@ -23,7 +23,7 @@ def main() -> None:
     parser.add_argument("--batch-size", type=int, default=4)
     parser.add_argument("--max-new-tokens", type=int, default=1024)
     parser.add_argument("--device", default="cuda:0")
-    parser.add_argument("--output", type=Path, default=Path("/tmp/telcobench-batch-smoke.json"))
+    parser.add_argument("--output", type=Path, default=Path("/tmp/calix-telco-bench-batch-smoke.json"))
     args = parser.parse_args()
     if args.batch_size < 1 or args.max_new_tokens < 1:
         parser.error("batch size and max-new-tokens must be positive")

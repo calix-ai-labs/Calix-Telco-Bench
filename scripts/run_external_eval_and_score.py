@@ -12,7 +12,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-CLI = ROOT / ".venv" / "bin" / "telcobench"
+CLI = ROOT / ".venv" / "bin" / "calix-telco-bench"
 POLL_SECONDS = 30
 
 

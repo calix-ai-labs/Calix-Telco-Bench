@@ -2,12 +2,12 @@ from pathlib import Path
 import hashlib
 import yaml
 import pytest
-from network_llm_eval import artifacts
-from network_llm_eval.artifacts import verify_target_artifacts
-from network_llm_eval.contracts import load_manifest, validate_manifest
-from network_llm_eval.env import load_judge_env
-from network_llm_eval.generation import _render, load_prompt_protocol, system_prompt
-from network_llm_eval.plan import load_run_config, resolve_target
+from calix_telco_bench import artifacts
+from calix_telco_bench.artifacts import verify_target_artifacts
+from calix_telco_bench.contracts import load_manifest, validate_manifest
+from calix_telco_bench.env import load_judge_env
+from calix_telco_bench.generation import _render, load_prompt_protocol, system_prompt
+from calix_telco_bench.plan import load_run_config, resolve_target
 
 def test_release_manifest_is_valid() -> None:
     root = Path(__file__).parents[1]
@@ -113,12 +113,12 @@ def test_artifact_digest_preflight_rejects_mismatch(tmp_path: Path) -> None:
 
 
 def test_judge_environment_loads_identity_without_exposing_credentials(tmp_path: Path, monkeypatch) -> None:
-    monkeypatch.delenv("NETWORK_LLM_EVAL_JUDGE_PROVIDER", raising=False)
-    monkeypatch.delenv("NETWORK_LLM_EVAL_JUDGE_MODEL", raising=False)
+    monkeypatch.delenv("CALIX_TELCO_BENCH_JUDGE_PROVIDER", raising=False)
+    monkeypatch.delenv("CALIX_TELCO_BENCH_JUDGE_MODEL", raising=False)
     env_file = tmp_path / ".env"
     env_file.write_text(
-        "NETWORK_LLM_EVAL_JUDGE_PROVIDER=test-provider\n"
-        "NETWORK_LLM_EVAL_JUDGE_MODEL=test-model\n"
+        "CALIX_TELCO_BENCH_JUDGE_PROVIDER=test-provider\n"
+        "CALIX_TELCO_BENCH_JUDGE_MODEL=test-model\n"
         "ANTHROPIC_API_KEY=must-not-be-returned\n",
         encoding="utf-8",
     )

@@ -170,7 +170,7 @@ def judge(
     metadata = load_judge_env(env_file)
     provider, model = metadata["provider"], metadata["model"]
     if not provider or not model:
-        raise JudgeError("NETWORK_LLM_EVAL_JUDGE_PROVIDER and NETWORK_LLM_EVAL_JUDGE_MODEL are required in .env")
+        raise JudgeError("CALIX_TELCO_BENCH_JUDGE_PROVIDER and CALIX_TELCO_BENCH_JUDGE_MODEL are required in .env")
     api_key = os.getenv("ANTHROPIC_AUTH_TOKEN") or os.getenv("ANTHROPIC_API_KEY")
     if not api_key and not dry_run:
         raise JudgeError("ANTHROPIC_AUTH_TOKEN or ANTHROPIC_API_KEY is required in .env")

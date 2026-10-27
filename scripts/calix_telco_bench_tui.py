@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Standalone entry point for the TelcoBench read-only monitor."""
+"""Standalone entry point for the Calix Telco-Bench read-only monitor."""
 from __future__ import annotations
 
 import sys
 
-from network_llm_eval.cli import main
+from calix_telco_bench.cli import main
 
 
 if __name__ == "__main__":

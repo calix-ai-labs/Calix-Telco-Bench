@@ -1,17 +1,19 @@
-# TelcoBench evaluation framework: core design and logic
+# Calix Telco-Bench evaluation framework: core design and logic
 
 ## Purpose
 
-TelcoBench evaluates how a language model answers held-out telecommunications
+Calix Telco-Bench evaluates how a language model answers telecommunications
 and network-infrastructure questions. It is deliberately an **evidence-first
 generation and rubric-evaluation harness**, rather than an automatic
 correctness test.
 
-The released benchmark supplies question text and canonical route labels, but
-not reference answers or executable oracles. Consequently, its primary result
-is a reproducible, LLM-judged quality score (0–25), plus generation coverage.
-It must not be reported as ground-truth accuracy, pass rate, or proof that a
-model is operationally safe.
+The released benchmark supplies question text and canonical route labels; 1,140
+records across six routes also include `response` reference answers. The current
+generation and rubric-evaluation path does not consume those references, and
+the release has no executable oracles. Consequently, its primary result is a
+reproducible, LLM-judged quality score (0–25), plus generation coverage. It must
+not be reported as ground-truth accuracy, pass rate, or proof that a model is
+operationally safe.
 
 ## Architecture at a glance
 

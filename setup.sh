@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Prepare a standalone TelcoBench checkout after cloning.
+# Prepare a standalone Calix Telco-Bench checkout after cloning.
 #
 # This script creates only repository-local state: .venv and, if absent, .env.
 # It never downloads model weights, writes credentials, or requires sudo.
@@ -27,10 +27,10 @@ if ! command -v uv >/dev/null 2>&1; then
 fi
 
 echo "Creating/synchronizing the package-local environment..."
-eval_python="${NETWORK_LLM_EVAL_PYTHON:-python3.11}"
+eval_python="${CALIX_TELCO_BENCH_PYTHON:-python3.11}"
 if ! command -v "$eval_python" >/dev/null 2>&1; then
   echo "Required Python interpreter is unavailable: $eval_python" >&2
-  echo "Install CPython 3.11 or set NETWORK_LLM_EVAL_PYTHON to a supported 3.10–3.12 interpreter." >&2
+  echo "Install CPython 3.11 or set CALIX_TELCO_BENCH_PYTHON to a supported 3.10–3.12 interpreter." >&2
   exit 1
 fi
 # Recreate only the disposable repository-local virtual environment. This
@@ -40,7 +40,7 @@ uv sync --extra huggingface --extra tui --extra judge --extra dev
 
 if [[ ! -f .env ]]; then
   cp .env.example .env
-  echo "Created .env from .env.example. Fill in NETWORK_LLM_EVAL_RELEASE_ROOT and judge settings before a model run."
+  echo "Created .env from .env.example. Fill in CALIX_TELCO_BENCH_RELEASE_ROOT and judge settings before a model run."
 else
   echo "Keeping existing .env."
 fi
@@ -48,7 +48,7 @@ fi
 mkdir -p outputs
 
 echo "Validating the bundled held-out manifest..."
-.venv/bin/telcobench validate datasets/MANIFEST.json
+.venv/bin/calix-telco-bench validate datasets/MANIFEST.json
 
 cat <<'EOF'
 
@@ -57,7 +57,7 @@ Setup complete.
 Next steps:
   1. Edit .env with your local approved artifact-bundle root and judge identity.
   2. Validate a configured target without loading weights:
-       .venv/bin/telcobench run-config --config config/default.yaml --target cpt_base --dry-run
+       .venv/bin/calix-telco-bench run-config --config config/default.yaml --target cpt_base --dry-run
   3. Start the read-only monitor:
-       .venv/bin/telcobench tui --config config/default.yaml --refresh-seconds 2
+       .venv/bin/calix-telco-bench tui --config config/default.yaml --refresh-seconds 2
 EOF

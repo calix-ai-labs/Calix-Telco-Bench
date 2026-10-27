@@ -274,7 +274,7 @@ def _dashboard(statuses: list[TargetStatus], gpus: list[dict[str, str]], judge_c
     for gpu in gpus:
         gpu_table.add_row(gpu["index"], gpu["name"], f"{gpu['memory_used_mib']}/{gpu['memory_total_mib']} MiB", f"{gpu['utilization_percent']}%", f"{gpu['power_w']} W", f"{gpu['temperature_c']} °C")
     now = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S UTC")
-    header = Text(f"TELCOBENCH CONTROL MONITOR  •  {now}  •  refresh {refresh_seconds:g}s", style="bold cyan")
+    header = Text(f"CALIX TELCO-BENCH CONTROL MONITOR  •  {now}  •  refresh {refresh_seconds:g}s", style="bold cyan")
     note = Text("Read-only persisted-evidence monitor. Ctrl+C closes only this view. Use start-all|status-all|stop-all to control the full pipeline.", style="dim")
     return Group(header, Panel(details, title="End-to-end evaluation control"), Panel(table, title="Target progress"), Panel(gpu_table, title="GPU telemetry"), note)
 
@@ -283,7 +283,7 @@ def monitor(config: dict[str, Any], config_path: Path, targets: list[str], refre
     try:
         from rich.live import Live
     except ImportError as exc:
-        raise RuntimeError("install telcobench[tui] for the terminal monitor") from exc
+        raise RuntimeError("install calix-telco-bench[tui] for the terminal monitor") from exc
     try:
         with Live(refresh_per_second=max(1, int(1 / max(refresh_seconds, 0.1))), screen=True) as live:
             while True:

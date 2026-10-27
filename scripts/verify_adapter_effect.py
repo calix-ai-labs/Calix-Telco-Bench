@@ -39,8 +39,8 @@ def main() -> int:
     import torch
     from peft import PeftModel
     from transformers import AutoModelForCausalLM, AutoTokenizer
-    from network_llm_eval.generation import _render, load_prompt_protocol, system_prompt
-    from network_llm_eval.plan import load_run_config, resolve_target
+    from calix_telco_bench.generation import _render, load_prompt_protocol, system_prompt
+    from calix_telco_bench.plan import load_run_config, resolve_target
 
     config_path = args.config.resolve()
     config = load_run_config(config_path)

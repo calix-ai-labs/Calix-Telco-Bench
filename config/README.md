@@ -1,10 +1,10 @@
-# TelcoBench configurations
+# Calix Telco-Bench configurations
 
-This directory contains versioned, publishable TelcoBench evaluation
+This directory contains versioned, publishable Calix Telco-Bench evaluation
 configurations. Run the default release configuration from the repository root:
 
 ```bash
-.venv/bin/telcobench run-config --config config/default.yaml --target cpt_base --dry-run
+.venv/bin/calix-telco-bench run-config --config config/default.yaml --target cpt_base --dry-run
 ```
 
 All paths inside these files are relative to the repository root, so invoke the
@@ -15,17 +15,17 @@ commit them to a configuration file.
 and `route-expert-v2.yaml` are alternate, environment-variable-based
 reproduction configurations. They contain no endpoint, credential, or fixed
 local artifact path; supply an approved artifact bundle through
-`NETWORK_LLM_EVAL_RELEASE_ROOT`.
+`CALIX_TELCO_BENCH_RELEASE_ROOT`.
 
 For a provider-neutral starting point, copy
 `example-openai-compatible.yaml` to `config/local/`, export the three variables
 below, and run a dry validation from the repository root:
 
 ```bash
-export TELCOBENCH_BASE_URL=https://your-provider.example/v1
-export TELCOBENCH_MODEL=your-model-id
-export TELCOBENCH_API_KEY=your-secret-token
-.venv/bin/telcobench run-config \
+export CALIX_TELCO_BENCH_BASE_URL=https://your-provider.example/v1
+export CALIX_TELCO_BENCH_MODEL=your-model-id
+export CALIX_TELCO_BENCH_API_KEY=your-secret-token
+.venv/bin/calix-telco-bench run-config \
   --config config/local/example-openai-compatible.yaml \
   --target example_model \
   --dry-run

@@ -1,5 +1,5 @@
 schema_version: 1
-protocol_id: telcobench-generation-neutral-v1
+protocol_id: calix-telco-bench-generation-neutral-v1
 condition: neutral_deployment_like
 system: >-
   You are a telecommunications and computer-networking assistant. Answer the

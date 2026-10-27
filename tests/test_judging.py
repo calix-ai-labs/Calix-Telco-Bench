@@ -2,21 +2,21 @@ from pathlib import Path
 
 import pytest
 
-from network_llm_eval.contracts import load_manifest
-from network_llm_eval.judging import (
+from calix_telco_bench.contracts import load_manifest
+from calix_telco_bench.judging import (
     JudgeError,
     _extract_json,
     _prompt,
     _load_rubric_contexts,
     _validate_vector,
 )
-from network_llm_eval.rubrics import (
+from calix_telco_bench.rubrics import (
     load_rubrics,
     missing_rubric,
     render_rubric,
     resolve_rubric,
 )
-from network_llm_eval.scoring import aggregate
+from calix_telco_bench.scoring import aggregate
 
 
 def test_judge_json_and_rubric_vector_are_validated() -> None:

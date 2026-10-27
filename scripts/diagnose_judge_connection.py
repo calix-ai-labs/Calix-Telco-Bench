@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Diagnose the configured LLM-as-judge endpoint without exposing credentials.
 
-Run from a cloned ``telcobench`` checkout using its local virtual
+Run from a cloned ``calix-telco-bench`` checkout using its local virtual
 environment.  The script does not import MOPD and never print credentials.  A
 request test deliberately uses the same Anthropic/httpx2 call contract as the
 evaluator, so it can distinguish a missing endpoint/token from a gateway
@@ -35,8 +35,8 @@ def _env(path: Path) -> dict[str, Any]:
         ),
         "credential_present": bool(token),
         "credential_length": len(token) if token else 0,
-        "judge_provider": os.getenv("NETWORK_LLM_EVAL_JUDGE_PROVIDER"),
-        "judge_model": os.getenv("NETWORK_LLM_EVAL_JUDGE_MODEL"),
+        "judge_provider": os.getenv("CALIX_TELCO_BENCH_JUDGE_PROVIDER"),
+        "judge_model": os.getenv("CALIX_TELCO_BENCH_JUDGE_MODEL"),
     }
 
 
@@ -105,7 +105,7 @@ def main() -> int:
     configuration_ok = bool(environment["credential_present"] and environment["base_url"] and environment["judge_model"])
     if args.requests and not configuration_ok:
         report["configuration_ok"] = False
-        report["error"] = "real probe requires ANTHROPIC_BASE_URL, a credential, and NETWORK_LLM_EVAL_JUDGE_MODEL"
+        report["error"] = "real probe requires ANTHROPIC_BASE_URL, a credential, and CALIX_TELCO_BENCH_JUDGE_MODEL"
         print(json.dumps(report, indent=2, sort_keys=True))
         return 2
     report["configuration_ok"] = configuration_ok

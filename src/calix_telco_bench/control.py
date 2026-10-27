@@ -20,9 +20,9 @@ from .artifacts import verify_target_artifacts
 from .plan import resolve_target
 
 
-_CONTROL_FILE = ".telcobench-control.json"
-_JUDGE_ALL_CONTROL_FILE = ".telcobench-judge-all-control.json"
-_PIPELINE_CONTROL_FILE = ".telcobench-pipeline-control.json"
+_CONTROL_FILE = ".calix-telco-bench-control.json"
+_JUDGE_ALL_CONTROL_FILE = ".calix-telco-bench-judge-all-control.json"
+_PIPELINE_CONTROL_FILE = ".calix-telco-bench-pipeline-control.json"
 
 
 def _control_path(output: Path) -> Path:
@@ -131,7 +131,7 @@ def start_pipeline(
             if path.exists():
                 path.unlink()
     command = [
-        sys.executable, "-m", "network_llm_eval.cli", "pipeline-run",
+        sys.executable, "-m", "calix_telco_bench.cli", "pipeline-run",
         "--config", str(config_path), "--targets", ",".join(targets),
     ]
     if limit_per_route is not None:
@@ -226,7 +226,7 @@ def start_judge_all(
         raise RuntimeError(f"judge-all is already running as PID {current['pid']}")
     root = Path(current["output"]); root.mkdir(parents=True, exist_ok=True)
     command = [
-        sys.executable, "-m", "network_llm_eval.cli", "judge-all", "--config", str(config_path),
+        sys.executable, "-m", "calix_telco_bench.cli", "judge-all", "--config", str(config_path),
         "--batch-size", str(batch_size), "--retries", str(retries), "--parallelism", str(parallelism),
     ]
     if resume:
@@ -283,7 +283,7 @@ def start(
         raise FileExistsError(f"{generations} already exists; use --resume or choose a new --output-suffix")
     output.mkdir(parents=True, exist_ok=True)
     command = [
-        sys.executable, "-m", "network_llm_eval.cli", "run-config",
+        sys.executable, "-m", "calix_telco_bench.cli", "run-config",
         "--config", str(config_path), "--target", target,
     ]
     if device is not None:

@@ -237,7 +237,7 @@ def main() -> None:
         result["provenance"] = {
             "generations_sha256": sha256(args.generations),
             "judgments_sha256": sha256(args.judgments),
-            "scoring_implementation": "network_llm_eval.scoring:aggregate",
+            "scoring_implementation": "calix_telco_bench.scoring:aggregate",
             "scoring_implementation_sha256": sha256(evaluator),
             "judge_protocol_path": str(args.judge_protocol) if args.judge_protocol else None,
             "judge_protocol_sha256": sha256(args.judge_protocol) if args.judge_protocol else None,

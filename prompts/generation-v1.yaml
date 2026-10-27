@@ -1,5 +1,5 @@
 schema_version: 1
-protocol_id: telcobench-generation-v1
+protocol_id: calix-telco-bench-generation-v1
 condition: route_conditioned_diagnostic
 decoding:
   do_sample: false

@@ -1,5 +1,5 @@
 schema_version: 1
-protocol_id: telcobench-generation-route-expert-v2
+protocol_id: calix-telco-bench-generation-route-expert-v2
 condition: route_conditioned_expert_diagnostic
 decoding:
   do_sample: false

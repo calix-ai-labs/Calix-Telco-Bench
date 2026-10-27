@@ -1,6 +1,6 @@
 from pathlib import Path
 
-from network_llm_eval import control
+from calix_telco_bench import control
 
 
 def test_stop_pipeline_still_stops_children_when_coordinator_is_not_running(

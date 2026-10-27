@@ -2,19 +2,19 @@ schema_version: 1
 protocol_id: calix-release-1.0-route-expert-v2
 
 release:
-  root: ${NETWORK_LLM_EVAL_RELEASE_ROOT}
+  root: ${CALIX_TELCO_BENCH_RELEASE_ROOT}
   cpt_base:
-    path: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/model_gated_candidate/cpt-llama31-8b-six-expert-final-oct-1
+    path: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/model_gated_candidate/cpt-llama31-8b-six-expert-final-oct-1
     model_safetensors_sha256: 1ed0a37794df019a3e5fad897bd6370dc5bec7b6ea1f8f3d0f80316aafeb2faa
   mopd_student:
-    path: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/model_gated_candidate/network-mopd-student-lora
+    path: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/model_gated_candidate/network-mopd-student-lora
     adapter_model_sha256: 5662f6fea99dc0ffa36243dd7ed7b977007a6751f4ca5f516beceba88b9afbed
 
 benchmark:
   manifest: ../datasets/MANIFEST.json
   prompts: ../prompts/generation-route-expert-v2.yaml
   condition: route_conditioned_expert_diagnostic
-  output_root: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/restricted_reproduction/evaluations/route-expert-v2
+  output_root: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/restricted_reproduction/evaluations/route-expert-v2
   max_new_tokens: 16384
   local_files_only: true
   trust_remote_code: false
@@ -31,42 +31,42 @@ targets:
   mopd_student_step_2000:
     device: cuda:1
     output: mopd-student-step-2000
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/model_gated_candidate/network-mopd-student-lora
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/model_gated_candidate/network-mopd-student-lora
     adapter_revision: 5662f6fea99dc0ffa36243dd7ed7b977007a6751f4ca5f516beceba88b9afbed
     routes: null
   dynamic_routing_teacher:
     device: cuda:0
     output: routed-teachers/dynamic-routing
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/restricted_reproduction/teacher_adapters/dynamic_routing_expert
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/restricted_reproduction/teacher_adapters/dynamic_routing_expert
     adapter_revision: ca62035b7a4af174eb699309aa9cb04e3424199da3bfabc3e480d5a6c83048b9
     routes: [bgp, ospf, isis]
   mpls_services_teacher:
     device: cuda:1
     output: routed-teachers/mpls-services
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/restricted_reproduction/teacher_adapters/mpls_services_expert
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/restricted_reproduction/teacher_adapters/mpls_services_expert
     adapter_revision: 956c53f7556588c62a3496e3b485b6f2cab3c48ecb68cc1d5958c8e87f8e50a1
     routes: [mpls_vpn]
   broadband_services_teacher:
     device: cuda:2
     output: routed-teachers/broadband-services
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/restricted_reproduction/teacher_adapters/broadband_services_expert
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/restricted_reproduction/teacher_adapters/broadband_services_expert
     adapter_revision: 394a8c3ebc7484c91a9fbffb0f7195ff6f231c9a486c8f492baa4d74963a84cf
     routes: [bng_subscriber_mgmt, qos]
   routing_fundamentals_teacher:
     device: cuda:3
     output: routed-teachers/routing-fundamentals
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/restricted_reproduction/teacher_adapters/routing_fundamentals_expert
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/restricted_reproduction/teacher_adapters/routing_fundamentals_expert
     adapter_revision: 8b5a163974b6f6e2e05e85c5115f8a664de80b21b6d315bbf3b1395e282ea9b6
     routes: [ip_routing, multicast]
   cli_diagnostics_teacher:
     device: cuda:2
     output: routed-teachers/cli-diagnostics
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/restricted_reproduction/teacher_adapters/cli_diagnostics_expert
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/restricted_reproduction/teacher_adapters/cli_diagnostics_expert
     adapter_revision: 291bf9fb36cf251bcc508879701c03a55656c706b7ca275dbb614c518bf84cd1
     routes: [linux_tool_calling, linux_tool_agentic, network_fundamentals]
   edge_access_teacher:
     device: cuda:3
     output: routed-teachers/edge-access
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/restricted_reproduction/teacher_adapters/edge_access_expert
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/restricted_reproduction/teacher_adapters/edge_access_expert
     adapter_revision: 94b5f9ecc5c914a02a8a9710aacd264884d654cd865ab7b5ec120c9b85f9f575
     routes: [l2_switching, pon_optical, wifi_gateway]

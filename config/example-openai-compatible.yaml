@@ -1,12 +1,12 @@
 # Copy this file to config/local/ and customize it for your provider.
-# Export TELCOBENCH_BASE_URL and TELCOBENCH_MODEL before running; keep any
+# Export CALIX_TELCO_BENCH_BASE_URL and CALIX_TELCO_BENCH_MODEL before running; keep any
 # provider credential in the environment named by api_key_env.
 schema_version: 1
-protocol_id: telcobench-openai-compatible-example-v1
+protocol_id: calix-telco-bench-openai-compatible-example-v1
 
 provider:
   kind: openai_compatible
-  base_url: ${TELCOBENCH_BASE_URL}
+  base_url: ${CALIX_TELCO_BENCH_BASE_URL}
   models_endpoint: /models
   chat_completions_endpoint: /chat/completions
   allow_missing_api_key: false
@@ -28,8 +28,8 @@ generation:
 targets:
   example_model:
     # Replace with the provider-visible model ID through the environment.
-    model: ${TELCOBENCH_MODEL}
+    model: ${CALIX_TELCO_BENCH_MODEL}
     # The value is an environment-variable name, never the credential itself.
-    api_key_env: TELCOBENCH_API_KEY
+    api_key_env: CALIX_TELCO_BENCH_API_KEY
     output: example-model
     routes: null

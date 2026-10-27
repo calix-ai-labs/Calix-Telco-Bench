@@ -4,7 +4,7 @@ import json
 
 import yaml
 
-from network_llm_eval.tui import target_status
+from calix_telco_bench.tui import target_status
 
 
 def test_target_status_reads_persisted_generation_evidence(tmp_path: Path) -> None:

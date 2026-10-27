@@ -11,7 +11,7 @@ def load_runtime_env(env_file: Path | None = None) -> Path | None:
     try:
         from dotenv import load_dotenv
     except ImportError as exc:
-        raise RuntimeError("install telcobench to load .env configuration") from exc
+        raise RuntimeError("install calix-telco-bench to load .env configuration") from exc
     resolved = (env_file or Path.cwd() / ".env").resolve()
     if resolved.is_file():
         load_dotenv(resolved, override=False)
@@ -28,8 +28,8 @@ def load_judge_env(env_file: Path | None = None) -> dict[str, str | None]:
     """
     resolved = load_runtime_env(env_file)
     return {
-        "provider": os.getenv("NETWORK_LLM_EVAL_JUDGE_PROVIDER") or None,
-        "model": os.getenv("NETWORK_LLM_EVAL_JUDGE_MODEL") or None,
-        "model_revision": os.getenv("NETWORK_LLM_EVAL_JUDGE_MODEL_REVISION") or None,
+        "provider": os.getenv("CALIX_TELCO_BENCH_JUDGE_PROVIDER") or None,
+        "model": os.getenv("CALIX_TELCO_BENCH_JUDGE_MODEL") or None,
+        "model_revision": os.getenv("CALIX_TELCO_BENCH_JUDGE_MODEL_REVISION") or None,
         "env_file": str(resolved) if resolved is not None else None,
     }

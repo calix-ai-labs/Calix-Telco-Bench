@@ -86,7 +86,7 @@ def run(*, manifest: Path, prompts: Path, model_path: str, adapter: str | None,
         import torch
         from peft import PeftModel
         from transformers import AutoModelForCausalLM, AutoTokenizer
-    except ImportError as exc: raise RuntimeError("install telcobench[huggingface]") from exc
+    except ImportError as exc: raise RuntimeError("install calix-telco-bench[huggingface]") from exc
     if not device.startswith("cuda") or not torch.cuda.is_available(): raise RuntimeError("MOPD-compatible evaluation requires --device cuda[:N]")
     validate_manifest(manifest); protocol = load_prompt_protocol(prompts)
     available_routes = [entry["route"] for entry in load_manifest(manifest)["routes"]]

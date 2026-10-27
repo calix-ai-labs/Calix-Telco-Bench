@@ -9,7 +9,7 @@ from typing import Any
 from .contracts import sha256
 
 
-_CACHE_FILE = ".telcobench-digest-cache.json"
+_CACHE_FILE = ".calix-telco-bench-digest-cache.json"
 _CACHE_SCHEMA_VERSION = 1
 
 

@@ -5,8 +5,8 @@
 # Example: ./run_model_eval.sh config/default.yaml
 #
 # Note: Ensure .env file exists in the project root with judge credentials:
-#   NETWORK_LLM_EVAL_JUDGE_PROVIDER=anthropic
-#   NETWORK_LLM_EVAL_JUDGE_MODEL=claude-sonnet-4-5
+#   CALIX_TELCO_BENCH_JUDGE_PROVIDER=anthropic
+#   CALIX_TELCO_BENCH_JUDGE_MODEL=claude-sonnet-4-5
 #   ANTHROPIC_AUTH_TOKEN=<your-token>
 
 set -e  # Exit immediately on error
@@ -24,7 +24,7 @@ if [ $# -eq 0 ]; then
 fi
 
 CONFIG="$1"
-VENV_BIN=".venv/bin/telcobench"
+VENV_BIN=".venv/bin/calix-telco-bench"
 
 # Check if configuration file exists
 if [ ! -f "$CONFIG" ]; then
@@ -40,8 +40,8 @@ if [ ! -f ".env" ]; then
     echo "⚠️  Warning: .env file not found in project root"
     echo "   The .env file is required for the judging step"
     echo "   Please ensure .env contains:"
-    echo "     NETWORK_LLM_EVAL_JUDGE_PROVIDER=anthropic"
-    echo "     NETWORK_LLM_EVAL_JUDGE_MODEL=claude-sonnet-4-5"
+    echo "     CALIX_TELCO_BENCH_JUDGE_PROVIDER=anthropic"
+    echo "     CALIX_TELCO_BENCH_JUDGE_MODEL=claude-sonnet-4-5"
     echo "     ANTHROPIC_AUTH_TOKEN=<your-token>"
     echo ""
 fi
@@ -118,7 +118,7 @@ echo "[7/7] View evaluation results"
 echo "After judging is complete, you can view results:"
 echo ""
 echo "    # View output directory with score summaries"
-echo "    ls -la \$(grep 'output_root:' $CONFIG | awk '{print \$2}' | sed 's/\${NETWORK_LLM_EVAL_RELEASE_ROOT}/./g')"
+echo "    ls -la \$(grep 'output_root:' $CONFIG | awk '{print \$2}' | sed 's/\${CALIX_TELCO_BENCH_RELEASE_ROOT}/./g')"
 echo ""
 echo "    # Each target directory contains:"
 echo "    #   - generations.jsonl (model outputs)"

@@ -1,21 +1,21 @@
 schema_version: 1
-protocol_id: telcobench-default-v1
+protocol_id: calix-telco-bench-default-v1
 
-# Example configuration showing TelcoBench evaluation structure.
+# Example configuration showing Calix Telco-Bench evaluation structure.
 # For your own evaluations, copy this file to config/local/ and update paths.
 #
-# Set NETWORK_LLM_EVAL_RELEASE_ROOT in .env to point to your model directory.
+# Set CALIX_TELCO_BENCH_RELEASE_ROOT in .env to point to your model directory.
 # This allows the same config to work across different environments.
 release:
-  root: ${NETWORK_LLM_EVAL_RELEASE_ROOT}
+  root: ${CALIX_TELCO_BENCH_RELEASE_ROOT}
   cpt_base:
     # Example: path to your base model (e.g., Llama-3.1-8B, Mistral-7B)
-    path: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/models/base-model
+    path: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/models/base-model
     # SHA256 hash for model verification - replace with your model's hash
     model_safetensors_sha256: 0000000000000000000000000000000000000000000000000000000000000000
   mopd_student:
     # Example: path to your MOPD student LoRA adapter
-    path: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/adapters/mopd-student-lora
+    path: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/adapters/mopd-student-lora
     # SHA256 hash for adapter verification - replace with your adapter's hash
     adapter_model_sha256: 0000000000000000000000000000000000000000000000000000000000000000
 
@@ -37,7 +37,7 @@ scoring:
   # Provider/model/revision and credentials are loaded from the untracked .env.
   # See .env.example; do not put judge configuration or credentials here.
 
-# Each target invokes the same network_llm_eval generator. Teacher targets are
+# Each target invokes the same calix_telco_bench generator. Teacher targets are
 # restricted to their MOPD-owned routes; this is an evaluation fixture, not a
 # deployment-time router.
 targets:
@@ -48,42 +48,42 @@ targets:
   mopd_student_step_2000:
     device: cuda:1
     output: mopd-student-step-2000
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/adapters/mopd-student-lora
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/adapters/mopd-student-lora
     adapter_revision: 0000000000000000000000000000000000000000000000000000000000000001  # Replace with your adapter's SHA256
     routes: null
   dynamic_routing_teacher:
     device: cuda:0
     output: routed-teachers/dynamic-routing
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/adapters/dynamic-routing-expert
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/adapters/dynamic-routing-expert
     adapter_revision: 0000000000000000000000000000000000000000000000000000000000000002  # Replace with your adapter's SHA256
     routes: [bgp, ospf, isis]
   mpls_services_teacher:
     device: cuda:1
     output: routed-teachers/mpls-services
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/adapters/mpls-services-expert
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/adapters/mpls-services-expert
     adapter_revision: 0000000000000000000000000000000000000000000000000000000000000003  # Replace with your adapter's SHA256
     routes: [mpls_vpn]
   broadband_services_teacher:
     device: cuda:2
     output: routed-teachers/broadband-services
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/adapters/broadband-services-expert
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/adapters/broadband-services-expert
     adapter_revision: 0000000000000000000000000000000000000000000000000000000000000004  # Replace with your adapter's SHA256
     routes: [bng_subscriber_mgmt, qos]
   routing_fundamentals_teacher:
     device: cuda:3
     output: routed-teachers/routing-fundamentals
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/adapters/routing-fundamentals-expert
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/adapters/routing-fundamentals-expert
     adapter_revision: 0000000000000000000000000000000000000000000000000000000000000005  # Replace with your adapter's SHA256
     routes: [ip_routing, multicast]
   cli_diagnostics_teacher:
     device: cuda:2
     output: routed-teachers/cli-diagnostics
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/adapters/cli-diagnostics-expert
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/adapters/cli-diagnostics-expert
     adapter_revision: 0000000000000000000000000000000000000000000000000000000000000006  # Replace with your adapter's SHA256
     routes: [linux_tool_calling, linux_tool_agentic, network_fundamentals]
   edge_access_teacher:
     device: cuda:3
     output: routed-teachers/edge-access
-    adapter: ${NETWORK_LLM_EVAL_RELEASE_ROOT}/adapters/edge-access-expert
+    adapter: ${CALIX_TELCO_BENCH_RELEASE_ROOT}/adapters/edge-access-expert
     adapter_revision: 0000000000000000000000000000000000000000000000000000000000000007  # Replace with your adapter's SHA256
     routes: [l2_switching, pon_optical, wifi_gateway]

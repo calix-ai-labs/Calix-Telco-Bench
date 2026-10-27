@@ -1,8 +1,9 @@
-# TelcoBench judge protocol v1
+# Calix Telco-Bench judge protocol v1
 
-Use this protocol only for **rubric-based** evaluation of the question-only
-TelcoBench release; it
-does not produce reference-grounded accuracy. Score factual correctness,
+Use this protocol only for **rubric-based** evaluation of Calix Telco-Bench
+generations. The current evaluator does not provide the `response` reference
+answers present in some release records to the judge, so this protocol does not
+produce reference-grounded accuracy. Score factual correctness,
 completeness, terminology/command precision, absence of technically false or
 fabricated claims, and operational usefulness as integers 0–5. The total is the
 sum (0–25).

@@ -3,13 +3,13 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "telcobench"
+name = "calix-telco-bench"
 version = "0.1.0"
 description = "A benchmark for evaluating language models on telecommunications and network-infrastructure tasks."
 readme = "README.md"
 # Judge transport is validated against the same CPython 3.11 runtime as MOPD.
 requires-python = ">=3.10,<3.13"
-license = "Apache-2.0"
+license = "AGPL-3.0-only"
 authors = [{name = "MOPD contributors"}]
 dependencies = ["PyYAML>=6.0", "python-dotenv>=1.0"]
 
@@ -22,7 +22,7 @@ judge = ["anthropic==1.6.0", "httpx2==2.13.0"]
 dev = ["pytest>=8.0"]
 
 [project.scripts]
-telcobench = "network_llm_eval.cli:main"
+calix-telco-bench = "calix_telco_bench.cli:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
